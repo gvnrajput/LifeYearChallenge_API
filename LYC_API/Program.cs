@@ -1,7 +1,7 @@
 using LYC_API.Service;
 
 var builder = WebApplication.CreateBuilder(args);
-//----File Path
+
 var UjsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "ChallengeData.json");
 builder.Services.AddSingleton(sp => UserService.GetInstance(UjsonFilePath));
 
